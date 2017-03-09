@@ -36,3 +36,33 @@ Ctrl + Shift + M
 Crtl + Enter
 Crtl + Shift + Enter
 ```
+
+####MoveTab to first/last position
+For some reason there is no file with settings for `MoveTab` plugin.
+So we need to use great [PackageResourceViewer](https://github.com/skuroda/PackageResourceViewer) package and manually edit default file with `sublime-keymap`. Just uncomment required fields. And enjoy tabs moving!
+
+```
+[
+    // Uncomment to enable.
+    // {
+    //  "keys": ["ctrl+shift+end"],
+    //  "command": "move_tab",
+    //  "args": { "position": "999" }
+    // },
+    // {
+    //  "keys": ["ctrl+shift+home"],
+    //  "command": "move_tab",
+    //  "args": { "position": "0" }
+    // },
+    {
+        "keys": ["ctrl+shift+pageup"],
+        "command": "move_tab",
+        "args": { "position": "-1" }
+    },
+    {
+        "keys": ["ctrl+shift+pagedown"],
+        "command": "move_tab",
+        "args": { "position": "+1" }
+    }
+]
+```
